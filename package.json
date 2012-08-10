@@ -1,0 +1,10 @@
+{
+  "author": "mattinsler <mattinsler@gmail.com>",
+  "name": "caboose-redis",
+  "description": "caboose-redis: a Caboose plugin",
+  "version": "0.0.1",
+  "main": "index",
+  "dependencies": {
+    "redis": "latest"
+  }
+}
