@@ -24,7 +24,7 @@ class Connection
     client.auth(password) if password?
     
     if database?
-      throw new Error('Database must be an integer') unless parseInt(database).toString() is database
+      throw new Error('Database must be an integer') unless parseInt(database).toString() is database.toString()
       client.select(parseInt(database))
     
     caboose_redis.connections[name] = client
