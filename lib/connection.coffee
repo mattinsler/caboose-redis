@@ -16,11 +16,16 @@ class Connection
     
     host = url_config?.hostname || config.host || 'localhost'
     port = url_config?.port || config.port || 6379
+    database = url_config?.pathname.slice(1) || config.database
     username = url_username || config.username
     password = url_password || config.password
     
     client = redis.createClient(port, host)
     client.auth(password) if password?
+    
+    if database?
+      throw new Error('Database must be an integer') unless parseInt(database).toString() is database
+      client.select(parseInt(database))
     
     caboose_redis.connections[name] = client
     

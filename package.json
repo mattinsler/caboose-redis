@@ -2,7 +2,7 @@
   "author": "mattinsler <mattinsler@gmail.com>",
   "name": "caboose-redis",
   "description": "caboose-redis: a Caboose plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index",
   "dependencies": {
     "redis": "latest"
